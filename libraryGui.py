@@ -86,9 +86,9 @@ def UpdateBookDialog(id,topic,author):
 def deleteBookDialog():
     global deleteDialog
     deleteDialog= Toplevel(window) 
+    deleteDialog.geometry("200x200")
     sureMeter = Label(deleteDialog, text="Are you sure",font=("Arial Bold",20))
-    sureMeter.grid(column=0 ,row=0 )
-
+    sureMeter.grid(column=0 ,row=0,columnspan=2 )
     btnYes = Button(deleteDialog,text="Yes",font=("Arial",18),fg="red",command=lambda:deleteBook(selectedTuple[0]))
     btnYes.grid(column=0,row=1)
 
