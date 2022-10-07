@@ -114,6 +114,8 @@ scb1 = Scrollbar(window)
 scb1.grid(row=2,column=2,rowspan=6)
 
 list1.bind("<<ListboxSelect>>",getSelectedRow)
+
+
 list1.configure(yscrollcommand=scb1.set)
 scb1.configure(command=list1.yview)
 
